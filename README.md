@@ -1,1 +1,4 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+A mobile app for Hackathon With Next.Js ...
+
+https://bit.ly/3E1mytN
+https://bit.ly/45xtjiA

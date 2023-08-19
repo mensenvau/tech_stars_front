@@ -6,10 +6,6 @@ import data from '../data/index'
 export default function Home() {
     const router = useRouter();
 
-    const moveToHomePage = () => {
-        router.push('/');
-    };
-
     return (
         <div className="main">
 
@@ -18,7 +14,6 @@ export default function Home() {
                     <h2>Qabulga yozilish</h2>
                 </div>
             </header>
-
 
             <div class="container">
                 <form className='form'>
@@ -33,7 +28,7 @@ export default function Home() {
                     </div>
 
                     <div>
-                        <label>TTo‘lov turini belgilang </label>
+                        <label>To'lov turini belgilang </label>
                         <select name="payment">
                             <option value="naqd">Naqd</option>
                             <option value="plastik">Plastik karta</option>

@@ -6,7 +6,6 @@ import data from '../data/index'
 export default function Home() {
     const router = useRouter();
 
-
     const moveToHomePage = () => {
         router.push('/');
     };
@@ -19,7 +18,6 @@ export default function Home() {
         return arr;
     }
 
-
     return (
         <div className="main">
 
@@ -29,6 +27,8 @@ export default function Home() {
                     <h2>Shifokorlar ro'yxati</h2>
                     <button><i class="fa fa-share" aria-hidden="true"></i></button>
                 </div>
+
+                <img src='https://bit.ly/44cl6zb' className='disable' />
             </header>
 
             <div className="category-cards">
