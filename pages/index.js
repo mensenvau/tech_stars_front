@@ -1,115 +1,87 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Image from 'next/image'
+import { useRouter } from 'next/router';
+import a1 from '../public/1_img1.png'
+import a2 from '../public/1_img2.png'
+import a3 from '../public/1_img3.png'
+import a4 from '../public/1_img4.png'
+import a5 from '../public/1_img5.png'
+import a6 from '../public/1_img6.png'
 
 export default function Home() {
+  const router = useRouter();
+
+  const moveToDoctorPage = () => {
+    router.push('/doctor');
+  };
+
   return (
-    <div className={styles.container}>
+    <div className="main" >
       <Head>
-        <title>Create Next App</title>
+        <title>DoctorMe</title>
         <link rel="icon" href="/favicon.ico" />
+
       </Head>
 
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <header> <h2> Mutaxassislikni tanlang </h2> </header>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <div className="category-cards">
+        {/* first */}
+        <div className="card" onClick={moveToDoctorPage}>
+          <Image src={a1} alt="..." width={70} height={70} priority />
+          <div>
+            <h2>Pediator</h2>
+            <p>Bolalar sog'lig'i va ularni parvarish qilish bo'yicha mutaxassis.</p>
+          </div>
         </div>
-      </main>
+        {/* second */}
+        <div className="card" onClick={moveToDoctorPage}>
+          <Image src={a2} alt="..." width={70} height={70} priority />
+          <div>
+            <h2>Kardiolog</h2>
+            <p>Yurak kasalligi bo'yicha mutaxassis.</p>
+          </div>
+        </div>
+        {/* 3th */}
+        <div className="card" onClick={moveToDoctorPage}>
+          <Image src={a3} alt="..." width={70} height={70} priority />
+          <div>
+            <h2>Psixolog</h2>
+            <p> Ruhiy salomatlik bo'yicha mutaxassis
+            </p>
+          </div>
+        </div>
+        {/* 4th */}
+        <div className="card" onClick={moveToDoctorPage}>
+          <Image src={a4} alt="..." width={70} height={70} priority />
+          <div>
+            <h2>Allergolog</h2>
+            <p> Allergik kasalliklarni aniqlash va davolashga ixtisoslashgan shifokor. </p>
+          </div>
+        </div>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
+        {/* 5th */}
+        <div className="card" onClick={moveToDoctorPage}>
+          <Image src={a5} alt="..." width={70} height={70} priority />
+          <div>
+            <h2>Lor</h2>
+            <p>Quloq, tomoq, burun kasalliklarini davolash va oldini olish bo'yicha mutaxassis
+            </p>
+          </div>
+        </div>
 
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
+        {/* 6th */}
+        <div className="card" onClick={moveToDoctorPage}>
+          <Image src={a6} alt="..." width={70} height={70} priority />
+          <div>
+            <h2>Endokrinolog</h2>
+            <p> Gormonal buzilishlar bo'yicha mutaxassis
+            </p>
+          </div>
+        </div>
 
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+
+      </div>
+    </div >
   )
 }
