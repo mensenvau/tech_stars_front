@@ -10,6 +10,12 @@ export default function Home() {
         router.push('/');
     };
 
+
+    const moveToDoctorPage = () => {
+        router.push('/applay');
+    };
+
+
     function getStar(num) {
         let arr = [];
         for (let i = 1; i <= num; i++) {
@@ -34,9 +40,9 @@ export default function Home() {
             <div className="category-cards">
                 {
                     data.map((item) => {
-                        return <div className="card" key={item.name}>
+                        return <div className="card" key={item.name} onClick={moveToDoctorPage}>
                             <img src={item.img} alt="Doctor" />
-                            <div>
+                            <div key={item.name} >
                                 <p className="name"> {item.name}</p>
                                 <p className="category">{item.category}</p>
                                 <p className="rating">{getStar(item.rating)}</p>
