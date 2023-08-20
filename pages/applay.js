@@ -73,6 +73,22 @@ export default function Home() {
                         />
                     </div>
 
+                    <div>
+                        <label>Sana va vaqtni</label>
+                        <input type="datetime-local" name="Sana" onChange={handleInputChange} required />
+                    </div>
+
+                    <div>
+                        <label> Ijoz:</label>
+                        <textarea
+                            rows="4"
+                            placeholder='Izoh qoldiring'
+                            name="Izoh"
+                            onChange={handleInputChange}
+                            required
+                        ></textarea>
+                    </div>
+
                     <button type="submit">Qabulga yozilish</button>
                 </form>
             </div>
