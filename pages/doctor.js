@@ -28,7 +28,7 @@ export default function Home() {
                     <button><i class="fa fa-share" aria-hidden="true"></i></button>
                 </div>
 
-                <img src='https://bit.ly/44cl6zb' className='disable' />
+                <img src='https://b.link/w5zyxy' className='disable' />
             </header>
 
             <div className="category-cards">
